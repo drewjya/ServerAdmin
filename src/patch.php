@@ -38,7 +38,7 @@
     }
     if ($res->num_rows > 0) {
     
-        //     <tr>
+        
         //     <th>Local Address</th>
         //     <th>Local Port</th>
         //     <th>Foreign Address</th>

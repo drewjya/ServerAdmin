@@ -1,0 +1,25 @@
+version: '3.3'
+services:
+  web:
+    build: 
+      context: ./
+      dockerfile: dockerfile
+    container_name: trucorp-web-2.0
+    volumes:
+      - ./src:/var/www/html
+    ports:
+      - 6000:80
+    depends_on:
+      - db
+  db:
+    container_name: mysql
+    image: mysql:8.0
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=inipassword
+      - MYSQL_DATABASE=Trucorp-db
+    ports:
+      - 6033:3306
+    volumes:
+      - "./trucorp-db.sql:/docker-entrypoint-initdb.d/1.sql"

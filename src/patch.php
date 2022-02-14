@@ -57,7 +57,7 @@
         // echo "</table>";
         
     } else {
-        echo "0 res";
+        echo "0 results";
     }
     $conn->close();
     ?>

@@ -1,10 +1,22 @@
-CREATE TABLE users(
-    ID varchar(10),
-    Nama varchar(255),
-    Alamat varchar(255),
-    Jabatan varchar(255),
-    PRIMARY KEY(ID)
+CREATE TABLE data 
+(
+    Local_Address	varchar(300),
+    Local_Port	varchar(300),
+    Foreign_Address	varchar(300),
+    Foreign_Port	varchar(300)
 );
 
-INSERT INTO users (ID, Nama, Alamat, Jabatan)
-VALUES ('1234567890', 'Jane Doe', 'Jl. Sayap Kudus', 'Professional Procrastinator');
+INSERT INTO data (Local_Address,Local_Port,Foreign_Address,Foreign_Port)
+VALUES
+    ('127.0.0.1', '49175', '127.0.0.1', '9050'),
+    ('127.0.0.1', '49159', '127.0.0.1', '49160'),
+    ('172.16.23.186', '49169', '94.130.200.167', '443'),
+    ('127.0.0.1', '49160', '127.0.0.1', '49159'),
+    ('127.0.0.1', '9050', '127.0.0.1', '49175'),
+    ('172.16.23.186', '49170', '51.81.93.162', '443'),
+    ('172.16.23.186', '49164', '83.212.99.68', '443'),
+    ('172.16.23.186', '49161', '204.11.50.131', '9001'),
+    ('172.16.23.186', '49171', '82.149.227.236', '9001'),
+    ('172.16.23.186', '49167', '131.188.40.189', '443');
+
+

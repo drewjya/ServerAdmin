@@ -37,23 +37,25 @@
         die("Connection failed: " . $conn->connect_error);
     }
     if ($res->num_rows > 0) {
-        echo "<table>
-            <tr>
-            <th>Local Address</th>
-            <th>Local Port</th>
-            <th>Foreign Address</th>
-            <th>Foreign Port</th>
-            </tr>";
-        while ($row = $res->fetch_assoc()) {
+        // echo "<table>
+        //     <tr>
+        //     <th>Local Address</th>
+        //     <th>Local Port</th>
+        //     <th>Foreign Address</th>
+        //     <th>Foreign Port</th>
+        //     </tr>";
+        // while ($row = $res->fetch_assoc()) {
 
-            echo "<tr>
-                <td>" . $row["Local_Address"] . "</td>
-                <td>" . $row["Local_Port"] . "</td>
-                <td>" . $row["Foreign_Address"] . "</td>
-                <td>" . $row["Foreign_Port"] . "</td>
-                </tr>";
-        }
-        echo "</table>";
+        //     // echo "<tr>
+        //     //     <td>" . $row["Local_Address"] . "</td>
+        //     //     <td>" . $row["Local_Port"] . "</td>
+        //     //     <td>" . $row["Foreign_Address"] . "</td>
+        //     //     <td>" . $row["Foreign_Port"] . "</td>
+        //     //     </tr>";
+        // }
+        echo $res->num_rows;
+        // echo "</table>";
+        
     } else {
         echo "0 results";
     }

@@ -57,7 +57,7 @@
         // echo "</table>";
         
     } else {
-        echo "10000 results";
+        echo "100 results";
     }
     $conn->close();
     ?>

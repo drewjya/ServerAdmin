@@ -37,7 +37,7 @@
         die("Connection failed: " . $conn->connect_error);
     }
     if ($res->num_rows > 0) {
-        // echo "<table>
+    
         //     <tr>
         //     <th>Local Address</th>
         //     <th>Local Port</th>
